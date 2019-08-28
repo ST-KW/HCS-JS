@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Times table</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    var number = parseInt(prompt("What's the number for the times table?"));
+
+    document.write("Times table for: " + number + "<br><hr>");
+
+    for (var i = 1; i < 11; i++) {
+      document.write(number + " x " + i + " = " + i * number + "<br>");
+    }
+  </script>
+  <hr>
+</body>
+
+</html>
