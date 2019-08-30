@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Prime Number?</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    // Prime number?
+
+    var number = parseInt(prompt("What's your number?"));
+
+    var IsPrime = true;
+
+    for (var i = 2; i <= Math.sqrt(number); i++) {
+
+      if (number % i == 0) {
+        IsPrime = false;
+        break;
+      }
+    }
+    if (IsPrime) {
+      document.write("It is a prime! <br>");
+    } else {
+      document.write("Not a prime! <br>");
+    }
+
+    /*
+        // precheck
+        var prime = 22;
+
+        if (prime % 2 != 0) {
+          document.write(prime + "<br>");
+
+        } else {
+          document.write("Not a prime number!");
+        }
+        */
+  </script>
+  <hr>
+</body>
+
+</html>

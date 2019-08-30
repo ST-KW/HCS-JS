@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Arrays</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    var numbers = [23, 12, 3, 5, 12, 45, -10, 66];
+    var sum = 0;
+
+    for (var i = 0; i < numbers.length; i++) {
+      document.write(numbers[i] + "<br>");
+      sum = sum + numbers[i];
+    }
+    document.write("<br><b> sum: " + sum + "</b>")
+
+    var largest = Math.max.apply(Math, numbers);
+    document.write("<br><br><b> largest: " + largest + "</b>");
+
+    var lowest = Math.min.apply(Math, numbers);
+    document.write("<br><br><b> lowest: " + lowest + "</b>");
+  </script>
+  <hr>
+</body>
+
+</html>

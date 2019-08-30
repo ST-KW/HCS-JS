@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Times table</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    /*
+     Write a program that asks the user for a number n
+     and prints the sum of the numbers 1 to n.
+
+     Modify the previous program such that only multiples
+     of three or five are considered in the sum,
+     e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
+    */
+
+    //var number = parseInt(prompt("What's your number n?"));
+    var number = 9;
+    var sum = 0;
+
+    document.write("The sum of all numbers from 1 to " + number + "<br><hr>");
+
+    for (var i = 1; i <= number; i++) {
+      if (i % 3 == 0) {
+        sum = sum + i;
+      }
+
+    }
+    document.write("<br><br><b> Sum: " + sum + "</b>");
+  </script>
+  <hr>
+</body>
+
+</html>
