@@ -10,3 +10,12 @@ console.log("Hello World!") // ; is optional
 console.log("Hello World!");
 console.log("How are you?");
 console.log("Fine. Thanks.");
+
+/*
+Output is:
+
+Hello World!
+How are you?
+Fine. Thanks.
+
+*/
