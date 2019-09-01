@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Sum of multiples of three or five.</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    /*
+     Write a program that asks the user for a number n
+     and gives them the possibility to choose between
+     computing the sum and computing the product of 1,…,n.
+    */
+
+    var number = parseInt(prompt("What's your number n?"));
+    var sum = 0;
+    var prod = 1;
+    var choose = prompt("Please type p for product or s for sum.");
+
+    if (choose == "s") {
+      for (var i = 1; i <= number; i++) {
+        document.write(i + ", ");
+        sum = sum + i;
+      }
+      document.write("<br><br><b> Sum: " + sum + "</b>");
+    }
+
+    if (choose == "p") {
+      for (var j = 1; j <= number; j++) {
+        document.write(j + ", ");
+        prod = prod * j;
+      }
+      document.write("<br><br><b> Prod: " + prod + "</b>");
+    }
+
+    if (choose != "s" && choose != "p") {
+      document.write("Please type <i>p</i> for product or <i>s</i> for sum.");
+    }
+  </script>
+  <hr>
+</body>
+
+</html>
