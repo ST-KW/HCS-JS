@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Times table</title>
+  <title>Sum of multiples of three or five.</title>
 </head>
 
 <body>
@@ -19,17 +19,18 @@
      e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
     */
 
-    //var number = parseInt(prompt("What's your number n?"));
-    var number = 9;
+    var number = parseInt(prompt("What's your number n?"));
     var sum = 0;
 
-    document.write("The sum of all numbers from 1 to " + number + "<br><hr>");
+    document.write("The sum of all numbers from 1 to " + number + " that only multiples of three or five.<br><hr>");
+
+    document.write("Added numbers: ");
 
     for (var i = 1; i <= number; i++) {
-      if (i % 3 == 0) {
+      if (i % 3 == 0 || i % 5 == 0) {
+        document.write(i + ", ");
         sum = sum + i;
       }
-
     }
     document.write("<br><br><b> Sum: " + sum + "</b>");
   </script>
