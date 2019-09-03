@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Fibonacci Sequence in an array</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    // Fibonacci Sequence in an array
+
+    var fibonacci = [0, 1];
+
+    for (var i = 2; i < 40; i++) {
+      fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+      document.write(fibonacci + "<br>");
+    }
+  </script>
+  <hr>
+</body>
+
+</html>

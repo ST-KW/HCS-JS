@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Functions</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    // Functions
+
+    function EmptyFunction() {}
+
+    function DoSomething() {
+      document.write("I'm just a simple function.<br>");
+    }
+
+    function greetings(name) {
+      document.write("Hi " + name + "!");
+    }
+
+    function sum(a, b) {
+      document.write("<br>The sum of " + a + " and " + b + " is " + (a + b) + ".<br>");
+    }
+
+    for (i = 1; i < 5; i++) {
+      DoSomething();
+    }
+
+    greetings("ST");
+
+    sum(2, 3);
+    sum(5, 8);
+
+    function product(a, b) {
+      var prod = a * b;
+      document.write("<br>The product of " + a + " and " + b + " is " + prod + ".<br>");
+    }
+
+    product(2, 3);
+    document.write("<br><br>" + prod); // don't work because prod is not defined in "main", only in the function.
+  </script>
+  <hr>
+</body>
+
+</html>

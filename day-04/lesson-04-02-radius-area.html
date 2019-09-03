@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Functions</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    function CircleArea(radius) {
+      var Area = Math.PI * radius * radius;
+      //var Area = Math.PI * Math.pow(radius, 2); // same like line above
+      return Area;
+    }
+
+    function CirclePerimeter(radius) {
+      return 2 * Math.PI * radius;
+    }
+
+    var area = CircleArea(5);
+    document.write("Area: " + area + "<br>");
+    var perimeter = CirclePerimeter(5);
+    document.write("Perimeter: " + perimeter);
+  </script>
+  <hr>
+</body>
+
+</html>
