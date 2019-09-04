@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Random numbers</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    function randomNumber(min, max) {
+      return Math.floor(Math.random() * (max + 1 - min)) + min;
+    }
+
+    for (var i = 1; i < 10000; i++) {
+      x = randomNumber(0, 9);
+      document.write(x + ", ");
+    }
+  </script>
+  <hr>
+</body>
+
+</html>
