@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Random number game</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    function randomNumber(min, max) {
+      if (min > max) {
+        return NaN;
+      }
+      return Math.floor(Math.random() * (max + 1 - min)) + min;
+    }
+
+    // We generate a random number between 0 and 99.
+
+    var gameNumber = randomNumber(0, 100);
+    // document.write(gameNumber);
+
+    // cheating
+    document.write("Cheater! " + gameNumber + "<br>")
+
+    // We ask the user for a number.
+    var playerNumber = parseInt(prompt("What's your guess?"));
+
+    // We check the number.
+    var counter = 0;
+
+    while (gameNumber != playerNumber && counter < 6) {
+      if (playerNumber < gameNumber) {
+        document.write("Nope. It's to small. <br>");
+      } else document.write("Nope. It's to big. <br>");
+      counter++;
+      playerNumber = parseInt(prompt("Again? (" + counter + " tries)"));
+    }
+    document.write("<br><br>Yay. That's correct! <br><br>");
+    document.write("You needed " + counter + " tries. <br>");
+  </script>
+  <hr>
+</body>
+
+</html>
