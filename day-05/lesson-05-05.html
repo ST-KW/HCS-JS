@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Random numbers</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    function randomNumber(min, max) {
+      return Math.floor(Math.random() * (max + 1 - min)) + min;
+    }
+
+    var someNumbers = [];
+    for (var i = 0; i < 5; i++) {
+      someNumbers[i] = randomNumber(1, 9);
+    }
+    document.write(someNumbers);
+
+    document.write("<br><br>");
+
+    var someNumbers = [];
+    for (var i = 0; i < 5; i++) {
+      someNumbers.push(randomNumber(1, 9));
+    }
+    document.write(someNumbers);
+  </script>
+  <hr>
+</body>
+
+</html>
