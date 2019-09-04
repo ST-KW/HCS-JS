@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>All prime numbers from 1 - 100</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    function PrimeNumber(number) {
+
+      for (var i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i == 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    var counter = 0;
+
+    for (i = 1; i <= 100; i++) {
+
+      IsPrime = PrimeNumber(i);
+      if (IsPrime) {
+        document.write(i + ", ");
+        counter++;
+      }
+    }
+    document.write("...");
+    document.write(counter);
+  </script>
+  <hr>
+</body>
+
+</html>
