@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Needle in haystack and random numbers.</title>
+</head>
+
+<body>
+  <br>
+  <hr>
+  <script>
+    function randomNumber(min, max) {
+      if (min > max) {
+        return NaN;
+      }
+      return Math.floor(Math.random() * (max + 1 - min)) + min;
+    }
+
+    function existsInArray(needle, haystack) {
+      for (var i = 0; i < haystack.length; i++) {
+        if (needle == haystack[i]) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    // create an array of 5 random numbers between 1..50 without repetition
+
+    /*    var array = [];
+
+        for (var i = 0; i < 5; i++) {
+          array[i] = randomNumber(1, 50);
+          document.write("<br>" + i + " :" + array[i] + "<br>");
+          if (existsInArray(array[i], array)) {
+            document.write("Number is in array.")
+          }
+        }
+        document.write("<br>" + array);
+    */
+
+    /*
+        var arrayLotteyNumbers = [];
+
+        for (var i = 0; i < 5; i++) {
+          var number = randomNumber(1, 5);
+          while (existsInArray(number, arrayLotteyNumbers)) {
+            number = randomNumber(1, 5)
+          }
+          arrayLotteyNumbers[i] = number;
+        }
+        document.write(arrayLotteyNumbers);
+        */
+    /*
+        var arrayLotteyNumbers = [];
+
+        while (arrayLotteyNumbers.length < 5) {
+          var number = randomNumber(1, 5);
+          if (existsInArray(number, arrayLotteyNumbers)) {
+            // Do nothing
+          } else {
+            arrayLotteyNumbers.push(number);
+          }
+        }
+        document.write(arrayLotteyNumbers);
+    */
+    var arrayLotteyNumbers = [];
+
+    while (arrayLotteyNumbers.length < 5) {
+      var number = randomNumber(1, 50);
+      if (!existsInArray(number, arrayLotteyNumbers)) {
+        arrayLotteyNumbers.push(number);
+      }
+    }
+    document.write(arrayLotteyNumbers);
+  </script>
+  <hr>
+</body>
+
+</html>
