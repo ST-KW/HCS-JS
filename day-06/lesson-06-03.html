@@ -3,15 +3,36 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Strings</title>
+  <title>Strings & dash it up</title>
 </head>
 
 <body>
   <br>
   <hr>
   <script>
+    var text = "Hello world! ";
 
+    text += "Hello universe!";
 
+    document.write(text + "<br><br>");
+
+    for (var i = 0; i < text.length; i++) {
+      document.write(text[i]);
+    }
+
+    document.write("<br><br>");
+
+    var word = "banana";
+
+    // Write a programm that add dashes (-) between every letter (Dash it up)
+    // banana -> b-a-n-a-n-a
+
+    for (var i = 0; i < word.length; i++) {
+      document.write(word[i]);
+      if (i < word.length - 1) {
+        document.write("-");
+      }
+    }
   </script>
   <hr>
 </body>
