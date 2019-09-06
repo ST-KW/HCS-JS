@@ -19,20 +19,24 @@
     var year = 2100;
     var counter = 0;
 
-    document.write("The next 20 leap years: <br><br>");
-
     for (var i = 2019; i <= year; i++) {
       if (i % 4 == 0) {
 
         if (i % 100 == 0) {
-          
+
           if (i % 400 == 0) {
             document.write("<u>" + i + "</u>" + ", ");
+            counter++;
           }
-        } else document.write(i + ", ");
+        } else {
+          document.write(i + ", ");
+          counter++;
+        }
       }
     }
     document.write(" ...");
+
+    document.write(" are the next " + counter + " leap years: <br><br>");
   </script>
   <hr>
 </body>
