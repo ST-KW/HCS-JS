@@ -22,19 +22,22 @@
         }
 
       }
-
       return false;
     }
-    var testArray = [3, 5, 10];
-    var testNumber = ;
+
+    var testArray = [3, 5, 10, 2, 77, 89, 24, 67, 4, 66, 97, 82, 15, 63];
+    var testNumber = 24;
 
     if (existsInArray(testNumber, testArray)) {
       answer = "Yes!";
     } else {
-      answer = "Nope!"
+      answer = "Nope!";
     }
 
+    document.write("Haystack: " + testArray);
+    document.write("<br><br>");
     document.write("Is the number " + testNumber + " in the haystack? <br><br>" + answer);
+
   </script>
   <hr>
 </body>
