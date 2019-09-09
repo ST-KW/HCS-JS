@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Palindrome or not?</title>
+</head>
+
+<body>
+  <br>
+
+  <script>
+    /*
+       create a function that asks the user for
+       a word and checks if it is a palindrome.
+   */
+
+    var word = "anna";
+    var palindromeYes = 0;
+    var palindromeNo = 0;
+
+
+    document.write("Your word: " + word + "<br>");
+    document.write("Length: " + word.length + "<br><br>");
+
+    for (var i = 0; i < word.length; i++) {
+      document.write(word[i] + "<br>");
+      document.write(word[word.length - 1 - i] + "<br>");
+      a = word[i];
+      b = word[word.length - 1 - i];
+      if (a == b) {
+        document.write("yes <br><br>")
+        palindromeYes++;
+      } else {
+        document.write("nope <br><br>")
+        palindromeNo++;
+      }
+    }
+
+    document.write(palindromeYes + " ---- ");
+    document.write(palindromeNo);
+    document.write("<br><br>");
+
+    if (palindromeNo > 0) {
+      document.write("Sorry, not a palindrome. <br><br>")
+    } else {
+      document.write("Yes, it's a palindrome! <br><br>")
+    }
+
+
+    document.write("<hr>");
+    for (var i = word.length - 1; i >= 0; i--) {
+      document.write(word[i] + "<br>");
+
+    }
+  </script>
+
+</body>
+
+</html>
