@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Names on odd positions in stack.</title>
+</head>
+
+<body>
+  <script>
+    /*
+        Write a program that prints the names on
+        odd positions in an array of names.
+    */
+
+    var nameArray = ["Alice", "Bob", "Carol", "Dave", "Erin", "Frank", "Grace", "Heidi", "Ivan", "Judy", "Karl", "Laura", "Mallory", "Niaj", "Olivia", "Peggy", "Quentin", "Rupert", "Sybil", "Ted", "Ulf", "Victor", "Walter", "Xenia", "Yahir", "Zack"];
+
+    document.write("All names in stack: <br><br>");
+
+    for (var i = 0; i < nameArray.length; i++) {
+      document.write("Position: " + i + ": " + nameArray[i] + "<br>");
+    }
+
+    document.write("<hr>");
+    document.write("All names on odd positions in stack: <br><br>");
+    for (var i = 0; i < nameArray.length; i++) {
+      if (i % 2 !== 0) {
+        document.write("Position: " + i + ": " + nameArray[i] + "<br>");
+      }
+    }
+  </script>
+</body>
+
+</html>
