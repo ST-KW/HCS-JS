@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>With regular functions.</title>
+  <style>
+    body {
+      background-color: grey;
+    }
+
+    #paragraph1 {
+      color: black
+    }
+
+    #button1 {
+      color: lightgray;
+      background-color: black;
+      border: solid 2px white;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="header1">Some text</h1>
+  <p id="paragraph1">some content</p>
+
+  <p>some more content</p>
+
+  <button id="button1">Click me!</button>
+
+  <br><br>
+  <p id="paragraph2"><b>Number?</b></p>
+  <button id="buttonPlus">+</button>
+  <button id="buttonMinus">-</button>
+
+  <script>
+    function userClicked() {
+      let p1 = document.getElementById("paragraph1");
+      p1.innerHTML += " something else ...";
+    }
+
+    let button1 = document.getElementById("button1");
+    button1.addEventListener("click", userClicked);
+
+    let number = 0;
+
+    function userClickedPlus() {
+      number++;
+      let p1 = document.getElementById("paragraph2");
+      p1.innerHTML = number;
+    }
+
+    function userClickedMinus() {
+      number--;
+      let p1 = document.getElementById("paragraph2");
+      p1.innerHTML = number;
+    }
+
+    let buttonPlus = document.getElementById("buttonPlus");
+    buttonPlus.addEventListener("click", userClickedPlus);
+
+    let buttonMinus = document.getElementById("buttonMinus");
+    buttonMinus.addEventListener("click", userClickedMinus);
+  </script>
+</body>
+
+</html>
