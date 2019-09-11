@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Color change</title>
+  <style>
+    body {
+      background-color: grey;
+    }
+
+    #myBox {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+    }
+
+    button {
+      color: black;
+      background-color: lightgray;
+      border: solid 2px darkgray;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="myBox"></div>
+  <br>
+  <button id="buttonChangeColor"> ChangeColor </button>
+
+  <script>
+    let buttonChangeColor = document.getElementById("buttonChangeColor");
+    myBox.style.backgroundColor = "red";
+
+    buttonChangeColor.addEventListener("click", function() {
+      let box = document.getElementById("myBox");
+      if (myBox.style.backgroundColor == "red") {
+        myBox.style.backgroundColor = "green";
+      } else if (myBox.style.backgroundColor == "green") {
+        myBox.style.backgroundColor = "blue";
+      } else if (myBox.style.backgroundColor == "blue") {
+        myBox.style.backgroundColor = "red";
+      }
+    });
+  </script>
+</body>
+
+</html>
